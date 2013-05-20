@@ -1,0 +1,15 @@
+[Bb]uild
+[Oo]bj
+[Bb]in
+[Cc]sx
+[Pp]ackages
+[Pp]ublish
+*.user
+*.suo
+*.[Cc]ache
+*.bak
+*.ncb
+*.log 
+*.DS_Store
+[Tt]humbs.db
+~$*
