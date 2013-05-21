@@ -1,4 +1,4 @@
-﻿/// <reference path="../../../DefinitelyTyped/durandal/durandal.d.ts" />
+﻿/// <reference path="../../Scripts/typings/durandal/durandal.d.ts" />
 
 import _router = module('durandal/plugins/router');
 import _app = module('durandal/app');

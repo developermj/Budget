@@ -1,4 +1,4 @@
-﻿/// <reference path="../../DefinitelyTyped/durandal/durandal.d.ts" />
+﻿/// <reference path="../Scripts/typings/durandal/durandal.d.ts" />
 
 import app = module('durandal/app');
 import locator = module('durandal/viewLocator');
