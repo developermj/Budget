@@ -13,3 +13,4 @@
 *.DS_Store
 [Tt]humbs.db
 ~$*
+Budget/Scripts/typings/*

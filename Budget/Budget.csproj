@@ -139,6 +139,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\boot.js" />
     <Content Include="App\durandal\amd\almond-custom.js" />
     <Content Include="App\durandal\amd\optimizer.exe" />
     <Content Include="App\durandal\amd\r.js" />
@@ -160,9 +161,21 @@
     <Content Include="App\durandal\viewModelBinder.js" />
     <Content Include="App\durandal\widget.js" />
     <Content Include="App\main-built.js" />
-    <Content Include="App\main.js" />
+    <Content Include="App\main.js">
+      <DependentUpon>main.ts</DependentUpon>
+    </Content>
+    <Content Include="App\main.min.js">
+      <DependentUpon>main.ts</DependentUpon>
+    </Content>
+    <Content Include="App\main.ts" />
     <Content Include="App\viewmodels\flickr.js" />
-    <Content Include="App\viewmodels\shell.js" />
+    <Content Include="App\viewmodels\shell.js">
+      <DependentUpon>shell.ts</DependentUpon>
+    </Content>
+    <Content Include="App\viewmodels\shell.min.js">
+      <DependentUpon>shell.ts</DependentUpon>
+    </Content>
+    <Content Include="App\viewmodels\shell.ts" />
     <Content Include="App\viewmodels\welcome.js" />
     <Content Include="App\views\detail.html" />
     <Content Include="App\views\flickr.html" />
@@ -199,6 +212,9 @@
     <Content Include="Scripts\knockout-2.2.1.js" />
     <Content Include="Scripts\sammy-0.7.4.js" />
     <Content Include="Scripts\sammy-0.7.4.min.js" />
+    <Content Include="Scripts\typings\durandal\durandal.d.ts" />
+    <Content Include="Scripts\typings\jquery\jquery.d.ts" />
+    <Content Include="Scripts\typings\knockout\knockout.d.ts" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -218,9 +234,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Durandal\_splash.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="readme.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

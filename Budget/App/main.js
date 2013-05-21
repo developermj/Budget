@@ -1,30 +1,19 @@
-﻿requirejs.config({
-    paths: {
-        'text': 'durandal/amd/text'
-    }
-});
+define(["require", "exports", 'durandal/app', 'durandal/viewLocator', 'durandal/system', 'durandal/plugins/router'], function(require, exports, __app__, __locator__, __system__, __router__) {
+    var app = __app__;
 
-define(['durandal/app', 'durandal/viewLocator', 'durandal/system', 'durandal/plugins/router'],
-    function(app, viewLocator, system, router) {
+    var locator = __locator__;
 
-        //>>excludeStart("build", true);
-        system.debug(true);
-        //>>excludeEnd("build");
+    var system = __system__;
 
-        app.title = 'Durandal Starter Kit';
-        app.start().then(function() {
-            //Replace 'viewmodels' in the moduleId with 'views' to locate the view.
-            //Look for partial views in a 'views' folder in the root.
-            viewLocator.useConvention();
+    var router = __router__;
 
-            //configure routing
-            router.useConvention();
-            router.mapNav('welcome');
-            router.mapNav('flickr');
-
-            app.adaptToDevice();
-
-            //Show the app by setting the root view model for our application with a transition.
-            app.setRoot('viewmodels/shell', 'entrance');
-        });
+    system.debug(true);
+    app.title = 'Durandal Starter Kit';
+    app.start().then(function () {
+        locator.useConvention();
+        router.useConvention();
+        router.mapNav('welcome');
+        app.adaptToDevice();
+        app.setRoot('viewmodels/shell', 'entrance');
     });
+})
